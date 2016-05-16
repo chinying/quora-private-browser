@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Quora browser",
+  "description": "allows user to browse quora without logging in",
+  "version": "0.1",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts" : [{
+    "matches": ["<all_urls>"],
+    "js" : ["jquery-2.2.3.min.js", "script.js"]
+  }]
+}
