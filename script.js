@@ -1,12 +1,12 @@
 var questionURL = function(q) {
-  q = q.split("/");
-  return q.length == 4;
+  var pattern = /[^.\s]+\.quora\.com\/[a-zA-z\-]*/
+  return pattern.test(q);
 }
 
 $("a").bind("click", function() {
   console.log($(this));
   var url = ($(this)[0].href);
   if (questionURL(url)) {
-    window.location.href = url + "?share=1";
+    $(this)[0].href = url + "?share=1";
   }
 });

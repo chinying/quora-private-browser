@@ -8,7 +8,7 @@
     "<all_urls>"
   ],
   "content_scripts" : [{
-    "matches": ["<all_urls>"],
+    "matches": ["*://*.quora.com/*"],
     "js" : ["jquery-2.2.3.min.js", "script.js"]
   }]
 }
